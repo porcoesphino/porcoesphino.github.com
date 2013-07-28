@@ -141,6 +141,84 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
     
   </div>
   
+    
+  <div class="span sidebar">
+    <div class="well">
+      
+        <section>
+  <h2>Recent Posts</h2>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/07/28/starting-a-new-octopress-blog/">Starting a new Octopress blog</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h2>Latest Tweets</h2>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+    <a href="http://twitter.com/porcoesphino" class="twitter-follow-button" data-show-count="true">Follow @porcoesphino</a>
+  
+</section>
+
+<section>
+  <div id="popularthreads" class="dsq-widget">
+    <h2 class="dsq-widget-title">Popular Posts</h2>
+    <script type="text/javascript" src="http://brianarmstrong.disqus.com/popular_threads_widget.js?num_items=5"></script>
+  </div>
+</section>
+<section>
+  <h2>GitHub Repos</h2>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/porcoesphino">@porcoesphino</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'porcoesphino',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section class="googleplus">
+  <h2>
+    <a href="https://plus.google.com/112482183989514259353?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h2>
+</section>
+
+
+
+      
+    </div>
+  </div>
+
+
+  
 </div>
 
       </div>
