@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Travels]]></title>
-  <link href="http://porcoesphino.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Point Clouds | My Travels]]></title>
+  <link href="http://porcoesphino.github.io/blog/categories/point-clouds/atom.xml" rel="self"/>
   <link href="http://porcoesphino.github.io/"/>
   <updated>2013-08-15T01:24:19+09:00</updated>
   <id>http://porcoesphino.github.io/</id>
@@ -48,15 +48,6 @@
 
 <p>Prerequisites: mono-complete libusb-1.0-0-dev freeglut3-dev
 Mac: libtool libusb-dev</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Starting a new Octopress blog]]></title>
-    <link href="http://porcoesphino.github.io/blog/2013/07/27/starting-a-new-octopress-blog/"/>
-    <updated>2013-07-27T23:36:00+09:00</updated>
-    <id>http://porcoesphino.github.io/blog/2013/07/27/starting-a-new-octopress-blog</id>
-    <content type="html"><![CDATA[<p>So this is mostly just a filler until I get a bit more sorted out. Until then, here is my new blog ;)</p>
 ]]></content>
   </entry>
   

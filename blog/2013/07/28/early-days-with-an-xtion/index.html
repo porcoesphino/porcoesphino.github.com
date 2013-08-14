@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Starting a new Octopress blog - Bodey Baker</title>
+  <title>Early days with an Xtion - My Travels</title>
   <meta name="author" content="Bodey Baker">
 
   
-  <meta name="description" content="Starting a New Octopress Blog Jul 28th, 2013 So this is mostly just a filler until I get a bit more sorted out. Until then, here is my new blog ;) &hellip;">
+  <meta name="description" content="Early Days With an Xtion Jul 28th, 2013 I&rsquo;m about to start working with an Xtion and some point cloud work. First step is to get it running on &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,12 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://porcoesphino.github.io/blog/2013/07/28/starting-a-new-octopress-blog">
+  <link rel="canonical" href="http://porcoesphino.github.io/blog/2013/07/28/early-days-with-an-xtion">
   <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Just+
+Me+Again+Down+Here:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Bodey Baker" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="My Travels" type="application/atom+xml">
   <script src="/js/jquery.js"></script>
   <script src="/js/bootstrap-collapse.js"></script>
   <script src="/js/modernizr-2.0.js"></script>
@@ -87,6 +89,8 @@
     
     
     
+    <li><a href="mailto:bodey.baker@gmail.com" title="Email"><i class="icon-envelope-alt social-navbar"></i></a></li>
+    
 </ul>
 
   	    </div>
@@ -103,7 +107,7 @@
 
   <header>
   <div class="jumbotron">
-    Starting a New Octopress Blog
+    Early Days With an Xtion
 	<h5>
 
 
@@ -121,7 +125,36 @@
 </header>
   <div class="row-fluid">
     <div class="span12">
-      <p>So this is mostly just a filler until I get a bit more sorted out. Until then, here is my new blog ;)</p>
+      <p>I&rsquo;m about to start working with an Xtion and some point cloud work. First step is to get it running on my machine. It looks like there are a few packages around for OS X like these:
+&ndash; Hmm?</p>
+
+<p>I&rsquo;ve just recently made my box all pretty with Boxen (I had to change hard drives anyway) and I don&rsquo;t want a mess installed all through root owned directories. So, my first step is to install on a virtual machine. The linux instructions are far better documented anyway so I&rsquo;ll start there. I was hoping to have played with vagrant more before now, but I&rsquo;ll just have to make do.</p>
+
+<p>From what I can see, the instructions are:
+1 Install OpenNI (unstable version v 1.5.4.0) from <a href="http://openni.org/Downloads/OpenNIModules.aspx">http://openni.org/Downloads/OpenNIModules.aspx</a> .
+2 Install hardware binaries (stable version v 5.1.041) from <a href="http://openni.org/Downloads/OpenNIModules.aspx">http://openni.org/Downloads/OpenNIModules.aspx</a>
+3 Try NiViewer and pcl OpenNIGrabber</p>
+
+<p>Alternatively:
+&ndash; Install OpenNI.
+&ndash; Install Sensor Driver.
+&ndash; Install Nite.
+&ndash; Run the NiViewer under the sample folder in the OpenNI folder to test the camera. You can right click your mouse to change settings.
+&ndash; <a href="http://openni.org/Documentation/Tutorial/smpl_simple_view.html">http://openni.org/Documentation/Tutorial/smpl_simple_view.html</a> includes some useful samples to start working on.
+&ndash; If you haven’t heard of PCL, <a href="http://pointclouds.org/">http://pointclouds.org/</a> provides a large set of libraries on handling point clouds, and also a visualizer for viewing them in 3D. If you use PCL, it already provides an interface “OpenNIGrabber” to retrieve point clouds or color point clouds.</p>
+
+<p>The bmwesting/KinectArray project on GitHub lists these:
+ &ndash; OpenNI (<a href="http://www.openni.org/">http://www.openni.org/</a>)
+ &ndash; VTK 5.4+ (<a href="http://www.vtk.org/">http://www.vtk.org/</a>)
+ &ndash; Kinect Sensor Module for OpenNI:
+   &ndash; Linux &amp; Mac &amp; Win32 (<a href="https://github.com/avin2/SensorKinect">https://github.com/avin2/SensorKinect</a>)
+ &ndash; PrimeSense Sensor Module for OpenNI:
+ &ndash; Windows and Ubuntu Linux (<a href="http://www.openni.org/downloadfiles/opennimodules/openni-compliant-hardware-binaries/32-stable">http://www.openni.org/downloadfiles/opennimodules/openni-compliant-hardware-binaries/32-stable</a>)</p>
+
+<p>NOTE: One post mentioned issues if the camera wasn&rsquo;t run at 320x240</p>
+
+<p>Prerequisites: mono-complete libusb-1.0-0-dev freeglut3-dev
+Mac: libtool libusb-dev</p>
 
     </div>
   </div>
@@ -142,7 +175,9 @@
 
   <a href="/blog/categories/Nerdy/"><span class="badge">Nerdy</span></a>
 
-  <a href="/blog/categories/Octopress/"><span class="badge">Octopress</span></a>
+  <a href="/blog/categories/Point Clouds/"><span class="badge">Point Clouds</span></a>
+
+  <a href="/blog/categories/Xtion/"><span class="badge">Xtion</span></a>
 
 
 
@@ -175,6 +210,8 @@
     <div class="row-fluid">
       <div class="span12">
         <p class="meta">
+          
+            <a class="basic-alignment left" href="/blog/2013/07/27/starting-a-new-octopress-blog/" title="Previous Post: Starting a new Octopress blog">&laquo; Starting a new Octopress blog</a>
           
           
         </p>
@@ -213,8 +250,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://porcoesphino.github.io/blog/2013/07/28/starting-a-new-octopress-blog/';
-        var disqus_url = 'http://porcoesphino.github.io/blog/2013/07/28/starting-a-new-octopress-blog/';
+        var disqus_identifier = 'http://porcoesphino.github.io/blog/2013/07/28/early-days-with-an-xtion/';
+        var disqus_url = 'http://porcoesphino.github.io/blog/2013/07/28/early-days-with-an-xtion/';
         var disqus_script = 'embed.js';
       
     (function () {
