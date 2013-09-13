@@ -1,3 +1,6 @@
 [submodule ".themes/octopress-bootstrap"]
 	path = .themes/octopress-bootstrap
 	url = https://github.com/barmstrong/octopress-bootstrap
+[submodule ".themes/octoflat"]
+	path = .themes/octoflat
+	url = https://github.com/alexgaribay/octoflat
