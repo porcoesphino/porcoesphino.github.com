@@ -7,7 +7,8 @@ title: Bodey Baker
 subtitle: My Travels
 author: Bodey Baker
 simple_search: http://google.com/search
-description:
+description: "A homepage by Bodey Baker (porcoesphino) including travel, presonal stories and nerdy items."
+keywords: Bodey Baker, porcoesphino, learning, languages, korean, japanese, coding, programming
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -19,7 +20,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: bodey.baker@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -27,12 +28,12 @@ email:
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
 root: /
-permalink: /blog/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+category_dir: categories
 source: source
 destination: public
 plugins: plugins
 code_dir: downloads/code
-category_dir: blog/categories
 markdown: rdiscount
 rdiscount:
   extensions:
@@ -50,7 +51,7 @@ titlecase: true       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
+default_asides: [asides/recent_posts.html, asides/twitter.html, custom/asides/popular.html, asides/github.html, asides/delicious.html, asides/googleplus.html]
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
@@ -70,6 +71,10 @@ github_skip_forks: true
 
 # Twitter
 twitter_user: porcoesphino
+twitter_tweet_count: 4
+twitter_show_replies: false
+twitter_follow_button: true
+twitter_show_follower_count: true
 twitter_tweet_button: true
 
 # Google +1
@@ -86,7 +91,7 @@ pinboard_user:
 pinboard_count: 3
 
 # Delicious
-disqus_short_name: porcoesphino
+disqus_short_name: bodey
 disqus_show_comment_count: false
 
 # Google Analytics
@@ -94,3 +99,19 @@ google_analytics_tracking_id: UA-42777111-1
 
 # Facebook Like
 facebook_like: true
+
+linkedin_user: bodeybaker
+
+## Theme
+
+navigation:
+- text: Bodey Baker
+  url: /index.html
+- text: Blog
+  url: /blog/
+- text: Projects
+  url: /projects/
+- text: Résumé
+  url: /resume/cv-bodey.pdf
+- text: Contact
+  url: /contact/
