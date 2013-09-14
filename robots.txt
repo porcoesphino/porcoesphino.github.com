@@ -1,4 +1,2 @@
 User-agent: *
-Disallow: 
-
-Sitemap: http://porcoesphino.github.io/sitemap.xml 
+Allow: /

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Nerdy | Bodey Baker]]></title>
+  <link href="http://porcoesphino.github.io/categories/nerdy/atom.xml" rel="self"/>
+  <link href="http://porcoesphino.github.io/"/>
+  <updated>2013-09-14T22:07:24+09:00</updated>
+  <id>http://porcoesphino.github.io/</id>
+  <author>
+    <name><![CDATA[Bodey Baker]]></name>
+    <email><![CDATA[bodey.baker@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Starting a new Octopress blog]]></title>
+    <link href="http://porcoesphino.github.io/2013/07/27/starting-a-new-octopress-blog/"/>
+    <updated>2013-07-27T23:36:00+09:00</updated>
+    <id>http://porcoesphino.github.io/2013/07/27/starting-a-new-octopress-blog</id>
+    <content type="html"><![CDATA[<p>So this is mostly just a filler until I get a bit more sorted out. Until then, here is my new blog ;)</p>
+]]></content>
+  </entry>
+  
+</feed>
