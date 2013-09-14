@@ -92,8 +92,13 @@ nav.navbar a:hover, button:hover {
 }
 
 ul.social-navbar>li>a {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+ul.social-navbar>li {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 h2 {
@@ -105,6 +110,9 @@ div.sidebar > div > section:first-child > h2 {
   margin-top: 0px;
 }
 
+.dropdown-split-left>a {
+  padding-right: 5px;
+}
 .dropdown-split-right>a.dropdown-toggle {
   padding-left: 0px;
 }
@@ -163,14 +171,14 @@ body {
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
           <li class="dropdown-split-left"><a href="/blog">My Travels</a></li>
-          <li class="dropdown dropdown-split-right hidden-phone">
+          <li class="dropdown dropdown-split-right hidden-xs">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="icon-caret-down"></i>
             </a>
-            <ul class="dropdown-menu pull-right">
+            <ul class="dropdown-menu pull-right visible-xs">
               <li><a href="/categories/travel">Travel</a></li>
-              <li><a href="/categories/nerdy">Nerdy</a></li>
-              <li><a href="/categories/life">Life</a></li>
+              <li><><a href="/categories/nerdy">Nerdy</a></li>
+              <li><><a href="/categories/life">Life</a></li>
             </ul>
           </li>
           <li><a href="/projects">Projects</a></li>
@@ -179,20 +187,20 @@ body {
 
     <ul class="nav navbar-nav social-navbar" role="social">
     
-    <li><a href="http://github.com/porcoesphino" title="Github Profile"><i class="icon-github-sign social-navbar"></i></a></li>
+    <li class="col-xs-1"><a href="http://github.com/porcoesphino" title="Github Profile"><i class="icon-github-sign social-navbar"></i></a></li>
     
     
-    <li><a href="http://linkedin.com/in/bodeybaker" title="Linkedin Profile"><i class="icon-linkedin-sign social-navbar"></i></a></li>
+    <li class="col-xs-1"><a href="http://linkedin.com/in/bodeybaker" title="Linkedin Profile"><i class="icon-linkedin-sign social-navbar"></i></a></li>
     
     
-    <li><a href="http://twitter.com/porcoesphino" title="Twitter Profile"><i class="icon-twitter-sign social-navbar"></i></a></li>
+    <li class="col-xs-1"><a href="http://twitter.com/porcoesphino" title="Twitter Profile"><i class="icon-twitter-sign social-navbar"></i></a></li>
     
     
-    <li><a href="http://plus.google.com/112482183989514259353" title="Google+ Profile"><i class="icon-google-plus-sign social-navbar"></i></a></li>
+    <li class="col-xs-1"><a href="http://plus.google.com/112482183989514259353" title="Google+ Profile"><i class="icon-google-plus-sign social-navbar"></i></a></li>
     
     
     
-    <li><a href="mailto:bodey.baker@gmail.com" title="Email"><i class="icon-envelope-alt social-navbar"></i></a></li>
+    <li class="col-xs-1"><a href="mailto:bodey.baker@gmail.com" title="Email"><i class="icon-envelope-alt social-navbar"></i></a></li>
     
 </ul>
 
@@ -380,8 +388,6 @@ body {
   
 </div>
 
-    </div>
-  </div>
   <footer class="row footer"><div class="col-md-12"><p>Bodey Baker, 2013: This work is licensed under the
   <a href="http://creativecommons.org/licenses/by-sa/3.0/">
     CC By-SA 3.0
@@ -390,6 +396,8 @@ body {
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 </div></footer>
+    </div>
+  </div>
 
 
 <script type="text/javascript">
