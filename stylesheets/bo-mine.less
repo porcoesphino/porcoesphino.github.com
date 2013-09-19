@@ -1,0 +1,133 @@
+@import "http://localhost:4000/assets/bootstrap/less/bootstrap.less";
+@import "http://localhost:4000/assets/bootstrap/less/labels.less";
+
+/* Medium devices (desktops, 992px and up)
+@media (min-width: @screen-md) { ... } */
+
+/* http://fonts.googleapis.com/css?family=Marvel&subset=latin */
+@font-face {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Marvel'), local('Marvel-Regular'), url('/assets/fonts/Marvel-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url('/assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('/assets/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@media (min-width: 980px) {
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+nav.navbar a:hover, button:hover {
+  color: #e69411 !important;
+}
+
+.footer {
+  color: #cccccc;
+  text-align: center;
+}
+.footer p {
+  font-size: 11px;
+}
+.footer a {
+  color: #ccccff;
+}
+
+ul.social-navbar>li>a {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+ul.social-navbar>li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+header h1 {
+  font-family: Marvel;
+}
+
+header time {
+  font-family: Marvel;
+  color: #777777;
+}
+
+a.category {
+  .label;
+  .label-info;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: roboto;
+}
+
+.sidebar ul {
+  padding-left: 0px;
+}
+
+.sidebar ul li {
+  list-style: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: hsl(0, 0%, 91%);
+}
+
+.sidebar section:first-child > h2 {
+  margin-top: 0px;
+}
+
+.dropdown-split-left>a {
+  padding-right: 5px;
+}
+.dropdown-split-right>a.dropdown-toggle {
+  padding-left: 0px;
+}
+
+div.thumbnail img {
+  margin: auto;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 70px;
+}
+
+.navbar {
+  font-family: Marvel;
+}
+
+.title {
+  font-family: Marvel;
+  font-weight: 700;
+  display: inline;
+  padding-right: 0.5ex;
+}
+
+.subtitle {
+  font-family: Marvel;
+  font-weight: 400;
+  display: inline;
+}
+
+.container > .navbar-header {
+  width: 100%;
+}
