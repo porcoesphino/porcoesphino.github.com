@@ -1,10 +1,13 @@
 ---
 layout: page
-title: Whoops I couldn't find that page
+title: This Page Seems To Be Missing
 footer: true
+sharing: false
 ---
 
 You may want to try a search above, or [visit the homepage](/).
+
+If this was a broken link than please <em>contact me about it</em>.
 
 Also, here are some recent posts:
 
