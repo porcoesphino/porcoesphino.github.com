@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Scapy is pretty awesome"
+date: 2012-01-20
+comments: false
+categories:
+ - Nerdy
+ - Ethernet
+ - Scapy
+ - Python
+---
+
+<div class='post'>
+If you're doing anything over a network where you need to inspect packet traffic and inject some, and you also know a bit of Python then I highly recommend Scapy. Probably because I've never used another tool that does these things :P It uses the same <i>pcaplib</i> library that Wireshark uses.<br /><br />The only issues I've had with it is sniffing packets when there is a lot of traffic. This add a fair load to the system if you're just using&nbsp;<i>lfilter</i> and some Python code to do the filtering. The way around this is to ensure that the filtering is done in <i>libpcap</i> which is <b>way</b> faster. I haven't looked into the internals of this, but I usually do it by passing a <i>tcpdump</i> command line expression as a string to the named input variable "<i>filter</i>". Here is<a href="http://www.alexonlinux.com/tcpdump-for-dummies"> a bit of a guide</a> to these expressions and other wise just look at <a href="http://linux.about.com/library/cmd/blcmdl8_tcpdump.htm">the man page</a>. That seems like obvious enough places to find the information and yet I started writing this because I kept needing to search for it &gt;&lt;<br /><br />Here's an example (where <i>mac_addr</i> stores the desired mac address):<br /><pre>sniff(filter="udp and src port bootpc and dst port bootps and !arp",<br />           lfilter=lambda(x):x.src==mac_addr,<br />             count=1)<br /></pre><br />Also, if someone else reads this <b>and</b>&nbsp;they actually know the correct capitalisation for the above then let me know.</div>

@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Matlab - Retrieving data from a fig file"
+date: 2006-06-26
+comments: false
+categories:
+ - Nerdy
+ - MATLAB
+---
+
+<div class='post'>
+Okay, so you've saved a pcolor plot as a fig, and now you don't want to rerun the algorithm to get your results. Another way to do this (there will be rounding errors) is to go:<div><br /></div><div>a = get(gca,'Children');<br /><br />This will give you all the objects in the current axis. You will then have to find which index points to your required surface plot or image. Once this is done then use the following code (ii is the index).<div><br /></div><div>c = get(a(ii), 'CData');<br />x = get(a(ii), 'XData');<br />y = get(a(ii), 'YData');</div></div></div>

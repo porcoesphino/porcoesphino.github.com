@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Adding update all to Word"
+date: 2010-01-20
+comments: false
+categories:
+ - Nerdy
+---
+
+<div class='post'>
+Apparently MS Word doesn't have an update all button for fields, which is frustrating. It also doesn't have the developer tab added by default which is just as annoying. It can be found in a checkbox under general settings. Update all can be added in as a macro as summarised on <a href="http://www.gmayor.com/installing_macro.htm">this blog</a>. But in summary, the macro's code is simply this:<br /><code><br />Sub UpdateAll()<br />Dim oStory As Range<br />For Each oStory In ActiveDocument.StoryRanges<br />oStory.Fields.Update<br />If oStory.StoryType &lt;&gt; wdMainTextStory Then<br />While Not (oStory.NextStoryRange Is Nothing)<br />Set oStory = oStory.NextStoryRange<br />oStory.Fields.Update<br />Wend<br />End If<br />Next oStory<br />Set oStory = Nothing<br />End Sub</code></div>

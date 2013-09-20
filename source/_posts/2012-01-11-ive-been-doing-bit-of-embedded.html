@@ -1,0 +1,13 @@
+---
+layout: post
+title: "A Boring Title: Producer Consumer Queue"
+date: 2012-01-11
+comments: false
+categories:
+ - Nerdy
+ - Coding
+---
+
+I've been doing a bit of embedded programming for Stellaris microcontrollers in C recently. I've needed various queue's to buffer data between code running in different interrupt contexts and ended up using some hacked up sub optimal implementations that then got hacked away while trying to find a particularly annoying bug. After fixing the bug and coming back to clean up the code and merge, I found <a href="http://msmvps.com/blogs/vandooren/archive/2007/01/05/creating-a-thread-safe-producer-consumer-queue-in-c-without-using-locks.aspx">a nice blog</a> going over a lockless producer consumer queue. It's reliant on at most one consumer thread and one producer thread. And neither of the reader access or writer access methods are reentrant. For my needs, there is more than one interrupt context that the producer can run from so interrupts have to be disabled in the code. Here is a mutilated version of the code. Due to a lack of locks, the size code should only be used as a rough measure. I was only using it for some debug while determining the best size for the queues.
+
+{% gist 6639144 %}
