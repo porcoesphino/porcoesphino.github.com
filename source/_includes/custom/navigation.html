@@ -1,6 +1,12 @@
-        <ul class="nav">
-          <li><a href="{{ root_url }}/">Home</a></li>
-          <li><a href="{{ root_url }}/blog/archives">Blog</a></li>
-          <li><a href="{{ root_url }}/projects">Projects</a></li>
-          <li><a href="{{ root_url }}/contact">Contact</a></li>
+      <li class="dropdown-split-left"><a href="{{ root_url }}/blog">My Travels</a></li>
+      <li class="dropdown dropdown-split-right hidden-xs">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="icon-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu pull-right">
+          <li><a href="{{ root_url }}/categories/travel">Travel</a></li>
+          <li><a href="{{ root_url }}/categories/nerdy">Nerdy</a></li>
+          <li><a href="{{ root_url }}/categories/life">Life</a></li>
         </ul>
+      </li>
+      <li><a href="{{ root_url }}/projects">Projects</a></li>

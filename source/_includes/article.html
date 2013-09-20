@@ -1,4 +1,5 @@
 {% unless page.no_header %}
+<article>
   <header>
     {% if index %}
       <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
@@ -11,6 +12,8 @@
         {% if site.disqus_short_name and page.comments != false and site.disqus_show_comment_count == true %}
          | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments</a>
         {% endif %}
+          by {% include post/author.html %}
+          {% include post/categories.html %}
       </p>
     {% endunless %}
   </header>
@@ -39,7 +42,7 @@
       </script>
     </div>
   {% endif %}
-  
+
   <div class="entry-content">{{ content }}</div>
 
   {% if page.wordpress_id %}
@@ -56,3 +59,4 @@
     </script>
   {% endif %}
 {% endif %}
+</article>

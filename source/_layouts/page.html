@@ -1,21 +1,25 @@
 ---
 layout: default
+sidebar: true
+footer: true
 ---
 
 <div class="row">
   {% if page.sidebar and site.sidebar_posn == "left" %}
     {% include sidebar.html %}
   {% endif %}
-  <div class="{% if page.sidebar == false %}span12{% else %}span8{% endif %}">
+  <div class="{% if page.sidebar == false %}col-md-12{% else %}col-md-9{% endif %}">
+    <main>
     {% if page.title %}
       <div class="page-header">
         <h1>{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
         {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
       </div>
     {% endif %}
-    
+
     {{ content }}
-    
+    </main>
+
     {% unless page.footer == false %}
       <footer>
         {% if page.date or page.author %}<p class="meta">
@@ -28,7 +32,7 @@ layout: default
         {% endunless %}
       </footer>
     {% endunless %}
-    
+
     {% if site.disqus_short_name and page.comments == true %}
       <section>
         <h1>Comments</h1>

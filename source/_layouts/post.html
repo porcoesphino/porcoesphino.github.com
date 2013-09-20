@@ -1,21 +1,17 @@
 ---
 layout: default
 single: true
-# page.sidebar is not necessarily set for pages - assume true if not set
 ---
 
 <div class="row">
   {% if page.sidebar != false and site.sidebar_posn == "left" %}
     {% include sidebar.html %}
   {% endif %}
-  <div class="{% if page.sidebar != false %}span8{% else %}span12{% endif %}">
-    {% include article.html %}
+  <div class="{% if page.sidebar != false %}col-md-9{% else %}col-md-12{% endif %}">
+    <main>
+{% include article.html %}
+    </main>
     <footer>
-      <p class="meta">
-        {% include post/author.html %}
-        {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-        {% include post/categories.html %}
-      </p>
       {% unless page.sharing == false %}
         {% include post/sharing.html %}
       {% endunless %}
@@ -28,7 +24,7 @@ single: true
         {% endif %}
       </p>
     </footer>
-    
+
     {% if site.disqus_short_name and page.comments != false %}
       <section>
         <h1>Comments</h1>
@@ -41,4 +37,3 @@ single: true
     {% include sidebar.html %}
   {% endif %}
 </div>
-
