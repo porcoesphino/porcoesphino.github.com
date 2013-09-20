@@ -1,0 +1,214 @@
+// Import from Boxen
+//
+// Core variables and mixins
+@import "variables.less";
+@import "mixins.less";
+
+// Reset
+@import "normalize.less";
+@import "print.less";
+
+// Core CSS
+@import "scaffolding.less";
+@import "type.less";
+@import "code.less";
+@import "grid.less";
+@import "tables.less";
+@import "forms.less";
+@import "buttons.less";
+
+// Components
+@import "component-animations.less";
+@import "glyphicons.less";
+@import "dropdowns.less";
+@import "button-groups.less";
+@import "input-groups.less";
+@import "navs.less";
+@import "navbar.less";
+@import "breadcrumbs.less";
+@import "pagination.less";
+@import "pager.less";
+@import "labels.less";
+@import "badges.less";
+@import "jumbotron.less";
+@import "thumbnails.less";
+@import "alerts.less";
+@import "progress-bars.less";
+@import "media.less";
+@import "list-group.less";
+@import "panels.less";
+@import "wells.less";
+@import "close.less";
+
+// Components w/ JavaScript
+@import "modals.less";
+@import "tooltip.less";
+@import "popovers.less";
+@import "carousel.less";
+
+// Utility classes
+@import "utilities.less";
+@import "responsive-utilities.less";
+
+
+// Fonts
+//
+/* http://fonts.googleapis.com/css?family=Marvel&subset=latin */
+@font-face {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Marvel'), local('Marvel-Regular'), url('/assets/fonts/Marvel-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url('/assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('/assets/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+// Make some variables
+//
+@background-span-color: #e8e8e8;
+@navbar-active-color: #e69411;
+
+// Override some defaults
+//
+@font-size-base:          14px;
+@font-family-base: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@navbar-default-link-hover-color: @navbar-active-color;
+@input-border-focus:              @navbar-active-color;
+@headings-font-family: Marvel;
+
+// Desktop Styling
+//
+@media (min-width: 980px) {
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+// Footer Styling
+//
+.footer {
+  color: #cccccc;
+  text-align: center;
+}
+.footer p {
+  font-size: 11px;
+}
+.footer a {
+  color: #ccccff;
+}
+
+// Navbar
+//
+ul.social-navbar>li>a {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+ul.social-navbar>li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.dropdown-split-left>a {
+  padding-right: 5px;
+}
+.dropdown-split-right>a.dropdown-toggle {
+  padding-left: 0px;
+}
+
+.navbar {
+  font-family: Marvel;
+}
+
+.container > .navbar-header {
+  width: 100%;
+}
+
+
+// Article
+//
+header time {
+  color: #777777;
+}
+
+a.category {
+  .label;
+  .label-info;
+}
+
+body {
+  padding-top: 70px;
+}
+
+.title {
+  font-family: Marvel;
+  font-weight: 700;
+  display: inline;
+  padding-right: 0.5ex;
+}
+
+.subtitle {
+  font-family: Marvel;
+  font-weight: 400;
+  display: inline;
+}
+
+article {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: @background-span-color;
+  .clearfix();
+}
+
+article img {
+  .img-thumbnail;
+  margin: 1em;
+}
+
+// Sidebar
+//
+.sidebar h2 {
+  font-size: 20px;
+  font-family: roboto;
+}
+
+.sidebar ul {
+  padding-left: 0px;
+}
+
+.sidebar ul li {
+  list-style: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: hsl(0, 0%, 91%);
+}
+
+.sidebar section:first-child > h2 {
+  margin-top: 0px;
+}
+
+// Projects
+//
+div.thumbnail img {
+  margin: auto;
+}
+
+.thumbnail h4 {
+  margin-top: 0px;
+}
