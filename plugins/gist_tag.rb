@@ -21,8 +21,14 @@ module Jekyll
     end
 
     def render(context)
-      if parts = @text.match(/([a-zA-Z\d]*) (.*)/)
-        gist, file = parts[1].strip, parts[2].strip
+      if parts = @text.match(/(.*) (.*)/)
+        gist, file = parts[1], parts[2]
+        if gist
+          gist = gist.strip
+        end
+        if file
+          file = file.strip
+        end
         script_url = script_url_for gist, file
         code       = get_cached_gist(gist, file) || get_gist_from_web(gist, file)
         html_output_for script_url, code
@@ -40,13 +46,13 @@ module Jekyll
     end
 
     def script_url_for(gist_id, filename)
-      url = "https://gist.github.com/#{gist_id}.js"
+      url = "https://gist.github.com/porcoesphino/#{gist_id}.js"
       url = "#{url}?file=#{filename}" unless filename.nil? or filename.empty?
       url
     end
 
     def get_gist_url_for(gist, file)
-      "https://raw.github.com/gist/#{gist}/#{file}"
+      "https://gist.github.com/porcoesphino/#{gist}/#{file}"
     end
 
     def cache(gist, file, data)
