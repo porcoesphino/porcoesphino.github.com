@@ -40,6 +40,8 @@ categories: news technology web
 author: Super Man
 comments: true
 published: false
+description: A brief awesome description
+keywords: keyword related
 ---
 ```
 
