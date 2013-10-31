@@ -52,6 +52,41 @@ If you set `published: false`, your posts will only be visible in preview mode.
 
 When ready, just use `rake generate && rake deploy` to publish it :)
 
+# Problems
+
+## Accidental merge
+
+This is not advised. Try using setting a branch to the prior commit and then pulling things out. Taken from [a stacked overflow post](http://stackoverflow.com/questions/1895059/revert-to-a-commit-by-sha-hash)
+
+```
+# reset the index to the desired tree
+git reset 56e05fced
+
+# move the branch pointer back to the previous HEAD
+git reset --soft HEAD@{1}
+
+git commit -m "Revert to 56e05fced"
+
+# Update working copy to reflect the new commit
+git reset --hard
+```
+
+## Starting from this repository
+
+[Taken from another blog post](http://blog.zerosharp.com/clone-your-octopress-to-blog-from-two-places/)
+
+```
+git clone -b source git@github.com:username/username.github.com.git octopress
+
+cd octopress
+git clone git@github.com:username/username.github.com.git _deploy 
+
+gem install bundler
+rbenv rehash
+bundle install
+rake setup_github_pages
+```
+
 # License
 (The MIT License)
 
