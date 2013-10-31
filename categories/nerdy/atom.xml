@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Nerdy | Bodey Baker]]></title>
   <link href="http://porcoesphino.github.io/categories/nerdy/atom.xml" rel="self"/>
   <link href="http://porcoesphino.github.io/"/>
-  <updated>2013-09-21T01:34:18+09:00</updated>
+  <updated>2013-10-31T22:11:15+08:00</updated>
   <id>http://porcoesphino.github.io/</id>
   <author>
     <name><![CDATA[Bodey Baker]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Apparently more than a standard stand-up gag]]></title>
     <link href="http://porcoesphino.github.io/2012/06/29/apparently-more-than-standard-stand-up/"/>
-    <updated>2012-06-29T00:00:00+09:00</updated>
+    <updated>2012-06-29T00:00:00+08:00</updated>
     <id>http://porcoesphino.github.io/2012/06/29/apparently-more-than-standard-stand-up</id>
     <content type="html"><![CDATA[<div class='post'>
 Well, apparently wine tasting is a bit of a gimmick. Well, the paper '<a href="http://www.wine-economics.org/workingpapers/AAWE_WP16.pdf">Do More Expensive Wines Taste Better? Evidence from a Large Sample of Blind Tastings</a>' say's something like that. This is more of a note for me to flick through it later and... I figure I might want to find this someday :P</div>
@@ -27,7 +27,7 @@ Well, apparently wine tasting is a bit of a gimmick. Well, the paper '<a href="h
   <entry>
     <title type="html"><![CDATA[A Boring Title: Producer Consumer Queue]]></title>
     <link href="http://porcoesphino.github.io/2012/01/11/ive-been-doing-bit-of-embedded/"/>
-    <updated>2012-01-11T00:00:00+09:00</updated>
+    <updated>2012-01-11T00:00:00+08:00</updated>
     <id>http://porcoesphino.github.io/2012/01/11/ive-been-doing-bit-of-embedded</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve been doing a bit of embedded programming for Stellaris microcontrollers in C recently. I&rsquo;ve needed various queue&rsquo;s to buffer data between code running in different interrupt contexts and ended up using some hacked up sub optimal implementations that then got hacked away while trying to find a particularly annoying bug. After fixing the bug and coming back to clean up the code and merge, I found <a href="http://msmvps.com/blogs/vandooren/archive/2007/01/05/creating-a-thread-safe-producer-consumer-queue-in-c-without-using-locks.aspx">a nice blog</a> going over a lockless producer consumer queue. It&rsquo;s reliant on at most one consumer thread and one producer thread. And neither of the reader access or writer access methods are reentrant. For my needs, there is more than one interrupt context that the producer can run from so interrupts have to be disabled in the code. Here is a mutilated version of the code. Due to a lack of locks, the size code should only be used as a rough measure. I was only using it for some debug while determining the best size for the queues.</p>
 
@@ -41,22 +41,22 @@ Well, apparently wine tasting is a bit of a gimmick. Well, the paper '<a href="h
   &lt;title&gt;ProducerConsumerQueue.c&lt;/title&gt;
 
   &lt;meta content=&quot;authenticity_token&quot; name=&quot;csrf-param&quot; /&gt;
-&lt;meta content=&quot;zZTwpe75Q4uBum/hHAm5voBK1lxrZDrWulRA+aSld/c=&quot; name=&quot;csrf-token&quot; /&gt;
+&lt;meta content=&quot;t5foxUCmw1JZmVJs+IIx2ENW4CC0LYkUx1Fb5BhO/2k=&quot; name=&quot;csrf-token&quot; /&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=960&quot;&gt;
 
 
   &lt;link type=&quot;text/plain&quot; rel=&quot;author&quot; href=&quot;https://github.com/humans.txt&quot; /&gt;
-  &lt;meta content=&quot;gist&quot; name=&quot;octolytics-app-id&quot; /&gt;&lt;meta content=&quot;collector.githubapp.com&quot; name=&quot;octolytics-host&quot; /&gt;
+  &lt;meta content=&quot;gist&quot; name=&quot;octolytics-app-id&quot; /&gt;&lt;meta content=&quot;collector.githubapp.com&quot; name=&quot;octolytics-host&quot; /&gt;&lt;meta content=&quot;collector-cdn.github.com&quot; name=&quot;octolytics-script-host&quot; /&gt;
 
   &lt;link href=&quot;/assets/application-40431a953a4fe71f7abb47ce95f23da2.css&quot; media=&quot;screen, print&quot; rel=&quot;stylesheet&quot; /&gt;
-  &lt;script src=&quot;/assets/application-0e9cfa9048fd8b9e3fe4ad1de9ce0047.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/assets/application-ef934eddf8f7b5930eb6630337249c2d.js&quot;&gt;&lt;/script&gt;
 
     &lt;meta name=&quot;twitter:card&quot; content=&quot;summary&quot;&gt;
   &lt;meta name=&quot;twitter:site&quot; content=&quot;@github&quot;&gt;
   &lt;meta property=&quot;og:title&quot; content=&quot;porcoesphino/ProducerConsumerQueue.c&quot;&gt;
   &lt;meta property=&quot;og:type&quot; content=&quot;githubog:gist&quot;&gt;
   &lt;meta property=&quot;og:url&quot; content=&quot;https://gist.github.com//porcoesphino/6639144&quot;&gt;
-  &lt;meta property=&quot;og:image&quot; content=&quot;https://1.gravatar.com/avatar/c992aac7727eefb8910e741996415cd7?d=https%3A%2F%2Fidenticons.github.com%2F132b2af25f97a32ee172dd1d0d3e6099.png&amp;amp;s=140&quot;&gt;
+  &lt;meta property=&quot;og:image&quot; content=&quot;https://2.gravatar.com/avatar/c992aac7727eefb8910e741996415cd7?d=https%3A%2F%2Fidenticons.github.com%2F132b2af25f97a32ee172dd1d0d3e6099.png&amp;amp;s=140&quot;&gt;
   &lt;meta property=&quot;og:site_name&quot; content=&quot;GitHub Gists&quot;&gt;
   &lt;meta property=&quot;og:description&quot; content=&quot; - Gist is a simple way to share snippets of text and code with others.&quot;&gt;
   &lt;meta name=&quot;description&quot; content=&quot; - Gist is a simple way to share snippets of text and code with others.&quot;&gt;
@@ -97,7 +97,7 @@ Well, apparently wine tasting is a bit of a gimmick. Well, the paper '<a href="h
         &lt;span class=&quot;mega-octicon octicon-gist&quot; &gt;&lt;/span&gt;
         &lt;div class=&quot;meta&quot;&gt;
           &lt;div class=&quot;gist-author&quot;&gt;
-            &lt;img src=&quot;https://1.gravatar.com/avatar/c992aac7727eefb8910e741996415cd7?d=https%3A%2F%2Fidenticons.github.com%2F132b2af25f97a32ee172dd1d0d3e6099.png&amp;s=140&quot; width=&quot;26&quot; height=&quot;26&quot;&gt;
+            &lt;img src=&quot;https://2.gravatar.com/avatar/c992aac7727eefb8910e741996415cd7?d=https%3A%2F%2Fidenticons.github.com%2F132b2af25f97a32ee172dd1d0d3e6099.png&amp;s=140&quot; width=&quot;26&quot; height=&quot;26&quot;&gt;
             &lt;span class=&quot;author vcard&quot;&gt;
                 &lt;span itemprop=&quot;title&quot;&gt;&lt;a href=&quot;/porcoesphino&quot;&gt;porcoesphino&lt;/a&gt;&lt;/span&gt;
             &lt;/span&gt; /
@@ -287,9 +287,9 @@ Well, apparently wine tasting is a bit of a gimmick. Well, the paper '<a href="h
   
   <entry>
     <title type="html"><![CDATA[A Geo-located Blog]]></title>
-    <link href="http://porcoesphino.github.io/2010/01/21/httpwwwtravelpodcomtravel/"/>
-    <updated>2010-01-21T00:00:00+09:00</updated>
-    <id>http://porcoesphino.github.io/2010/01/21/httpwwwtravelpodcomtravel</id>
+    <link href="http://porcoesphino.github.io/2010/01/21/geolocated-diary-a-travel-blog-review/"/>
+    <updated>2010-01-21T00:00:00+08:00</updated>
+    <id>http://porcoesphino.github.io/2010/01/21/geolocated-diary-a-travel-blog-review</id>
     <content type="html"><![CDATA[<div class='post'>
 I've decided to have a shot at a geo-located blog again. Ages ago I put together a hack job&nbsp;using yahoo tubes, google calendar and&nbsp;google mashup to kind of give you blog that you could navigate either by date or map. It didn't work very well, wasn't fun to put input data in, and I gave up fairly quick.&nbsp;Now google mashups doesn't exist anymore (<a href="http://googlemapsmania.blogspot.com/2010/01/google-calendar-google-maps.html">although a similar app does in google apps</a>) and finding my old google sites made me think: It's time; I'm going to find something that works. And so the hunt began.&nbsp;This time I'd also like it to be somehow compatible with google sites. At first it looked like a travel blog was the way to go. Sadly most of these didn't give me the navigation elements, or control that I wanted. And in almost all, I'd loose the data if they found it offensive. Really what I'm hoping for is just a blog that can have structured data for your location and a few other things like the weather, then also a few gadgets for things like making it navigatable via topic, calendar and map. Wait, lets put this into a list. They're always nicer to read:<br /><br /><ul><li>embedded map that:</li><ul><li>depends on posts</li><li>can be viewed like a trip</li><li>doesn't get too cluttered</li><li>can be embedded in individual posts</li><li>being able to clip what is contained in the map could be nice</li><li>isn't slow</li></ul><li>compatibility with mobile devices (ie. my android phone)</li><li>some other cool fields like weather</li><li>wow, that's not a lot really...</li></ul><br />But guess what? Blogger is adding geotagging!! Now all I need to do is to make a cool gadget or find someone else's. &nbsp;<a href="http://blurbbits.blogspot.com/">BlurbBits</a>&nbsp;seems like an early contender for taking information out of the blog, and parsing it into a navigation element. I think I'll go with this approach for now and let you know how it goes later. In the mean time I'll be reading a bit at <a href="http://googlemapsmania.blogspot.com/">Google maps Mania</a>&nbsp;and reading through a few of <a href="http://www.google.com/support/forum/p/blogger/thread?tid=6b96ea66f7eccf2b&amp;hl=en">these ideas</a> from travel bloggers using Blogger.&nbsp;Since I've already done a bit of research into the travel blogs, I figure I may as well summarise what I've found too.<br /><br />Here's a list of the ones I found (I'll be editing this soon):<br /><br /><ul><li>TravelPod</li><li>Travelblog</li><li>Travellerspoint (really good for planning trips and getting info)</li><li>Travbuddy (seemed to have some promise)</li><li>Dopplr (had some cool maps build up of things people have liked, along with a mobile site)</li><li>Everlater</li><li>Bootsnall</li><li>Offexploring (hardly worth mentioning)</li></ul><div>I found a few different reviews. <a href="http://www.travelfish.org/feature/91">This one</a>&nbsp;gives a nice&nbsp;review of TravelPod, Travelblog and Travellerspoint &nbsp;but it's over a year old and doesn't seem very accurate when it talks about the maps but this seems common for these reviews. I think TravelPod just updated their mapping stuff, but then it would seem that Travellerspoint's was also nerfed.&nbsp;<a href="http://www.tourcms.com/blog/2009/01/09/creating-a-trip-blog-how-would-you-do-it-pitch-your-ideas/">This review</a> goes over a few ideas in general for a self hosted blog. If you go to <a href="http://www.izunotravel.com/trip-journals-ranking/">IzunoTravel</a>&nbsp;you'll find a nice table summarising different travel blog features with a nice write up too.</div><div><br /></div><div>On a largely unrelated note, these&nbsp;<a href="http://www.designspongeonline.com/2009/08/made-with-love-found-terrariums.html">terrariums</a>&nbsp;are cool. I think I'll make one.</div><br /><br /><br /></div>
 
@@ -299,7 +299,7 @@ I've decided to have a shot at a geo-located blog again. Ages ago I put together
   <entry>
     <title type="html"><![CDATA[Adding update all to Word]]></title>
     <link href="http://porcoesphino.github.io/2010/01/20/adding-update-all-to-word/"/>
-    <updated>2010-01-20T00:00:00+09:00</updated>
+    <updated>2010-01-20T00:00:00+08:00</updated>
     <id>http://porcoesphino.github.io/2010/01/20/adding-update-all-to-word</id>
     <content type="html"><![CDATA[<div class='post'>
 Apparently MS Word doesn't have an update all button for fields, which is frustrating. It also doesn't have the developer tab added by default which is just as annoying. It can be found in a checkbox under general settings. Update all can be added in as a macro as summarised on <a href="http://www.gmayor.com/installing_macro.htm">this blog</a>. But in summary, the macro's code is simply this:<br /><code><br />Sub UpdateAll()<br />Dim oStory As Range<br />For Each oStory In ActiveDocument.StoryRanges<br />oStory.Fields.Update<br />If oStory.StoryType &lt;&gt; wdMainTextStory Then<br />While Not (oStory.NextStoryRange Is Nothing)<br />Set oStory = oStory.NextStoryRange<br />oStory.Fields.Update<br />Wend<br />End If<br />Next oStory<br />Set oStory = Nothing<br />End Sub</code></div>
@@ -310,7 +310,7 @@ Apparently MS Word doesn't have an update all button for fields, which is frustr
   <entry>
     <title type="html"><![CDATA[Latex - Slideshows]]></title>
     <link href="http://porcoesphino.github.io/2007/09/27/latex-slideshows/"/>
-    <updated>2007-09-27T00:00:00+09:00</updated>
+    <updated>2007-09-27T00:00:00+08:00</updated>
     <id>http://porcoesphino.github.io/2007/09/27/latex-slideshows</id>
     <content type="html"><![CDATA[<div class='post'>
 <br />I find that Latex slideshows actually look good, unlike there powerpoint cousins which often just look tacky. Unfortunately it can take a little more time putting together a latex slideshow. It seems the best bet is Keynote, but I'm a poor student! So here are a few notes for myself about using latex for slideshows.<br /><br />To use the CS Beamer package you will need the sty and lyx files <a href="http://web.csse.uwa.edu.au/internal_pages/csse_forms?f=157893" mce_href="http://web.csse.uwa.edu.au/internal_pages/csse_forms?f=157893">from here</a>.<br /><br /></div>

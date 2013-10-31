@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Coding | Bodey Baker]]></title>
   <link href="http://porcoesphino.github.io/categories/coding/atom.xml" rel="self"/>
   <link href="http://porcoesphino.github.io/"/>
-  <updated>2013-09-21T01:34:18+09:00</updated>
+  <updated>2013-10-31T22:11:15+08:00</updated>
   <id>http://porcoesphino.github.io/</id>
   <author>
     <name><![CDATA[Bodey Baker]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[A Boring Title: Producer Consumer Queue]]></title>
     <link href="http://porcoesphino.github.io/2012/01/11/ive-been-doing-bit-of-embedded/"/>
-    <updated>2012-01-11T00:00:00+09:00</updated>
+    <updated>2012-01-11T00:00:00+08:00</updated>
     <id>http://porcoesphino.github.io/2012/01/11/ive-been-doing-bit-of-embedded</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve been doing a bit of embedded programming for Stellaris microcontrollers in C recently. I&rsquo;ve needed various queue&rsquo;s to buffer data between code running in different interrupt contexts and ended up using some hacked up sub optimal implementations that then got hacked away while trying to find a particularly annoying bug. After fixing the bug and coming back to clean up the code and merge, I found <a href="http://msmvps.com/blogs/vandooren/archive/2007/01/05/creating-a-thread-safe-producer-consumer-queue-in-c-without-using-locks.aspx">a nice blog</a> going over a lockless producer consumer queue. It&rsquo;s reliant on at most one consumer thread and one producer thread. And neither of the reader access or writer access methods are reentrant. For my needs, there is more than one interrupt context that the producer can run from so interrupts have to be disabled in the code. Here is a mutilated version of the code. Due to a lack of locks, the size code should only be used as a rough measure. I was only using it for some debug while determining the best size for the queues.</p>
 
@@ -30,22 +30,22 @@
   &lt;title&gt;ProducerConsumerQueue.c&lt;/title&gt;
 
   &lt;meta content=&quot;authenticity_token&quot; name=&quot;csrf-param&quot; /&gt;
-&lt;meta content=&quot;zZTwpe75Q4uBum/hHAm5voBK1lxrZDrWulRA+aSld/c=&quot; name=&quot;csrf-token&quot; /&gt;
+&lt;meta content=&quot;t5foxUCmw1JZmVJs+IIx2ENW4CC0LYkUx1Fb5BhO/2k=&quot; name=&quot;csrf-token&quot; /&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=960&quot;&gt;
 
 
   &lt;link type=&quot;text/plain&quot; rel=&quot;author&quot; href=&quot;https://github.com/humans.txt&quot; /&gt;
-  &lt;meta content=&quot;gist&quot; name=&quot;octolytics-app-id&quot; /&gt;&lt;meta content=&quot;collector.githubapp.com&quot; name=&quot;octolytics-host&quot; /&gt;
+  &lt;meta content=&quot;gist&quot; name=&quot;octolytics-app-id&quot; /&gt;&lt;meta content=&quot;collector.githubapp.com&quot; name=&quot;octolytics-host&quot; /&gt;&lt;meta content=&quot;collector-cdn.github.com&quot; name=&quot;octolytics-script-host&quot; /&gt;
 
   &lt;link href=&quot;/assets/application-40431a953a4fe71f7abb47ce95f23da2.css&quot; media=&quot;screen, print&quot; rel=&quot;stylesheet&quot; /&gt;
-  &lt;script src=&quot;/assets/application-0e9cfa9048fd8b9e3fe4ad1de9ce0047.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/assets/application-ef934eddf8f7b5930eb6630337249c2d.js&quot;&gt;&lt;/script&gt;
 
     &lt;meta name=&quot;twitter:card&quot; content=&quot;summary&quot;&gt;
   &lt;meta name=&quot;twitter:site&quot; content=&quot;@github&quot;&gt;
   &lt;meta property=&quot;og:title&quot; content=&quot;porcoesphino/ProducerConsumerQueue.c&quot;&gt;
   &lt;meta property=&quot;og:type&quot; content=&quot;githubog:gist&quot;&gt;
   &lt;meta property=&quot;og:url&quot; content=&quot;https://gist.github.com//porcoesphino/6639144&quot;&gt;
-  &lt;meta property=&quot;og:image&quot; content=&quot;https://1.gravatar.com/avatar/c992aac7727eefb8910e741996415cd7?d=https%3A%2F%2Fidenticons.github.com%2F132b2af25f97a32ee172dd1d0d3e6099.png&amp;amp;s=140&quot;&gt;
+  &lt;meta property=&quot;og:image&quot; content=&quot;https://2.gravatar.com/avatar/c992aac7727eefb8910e741996415cd7?d=https%3A%2F%2Fidenticons.github.com%2F132b2af25f97a32ee172dd1d0d3e6099.png&amp;amp;s=140&quot;&gt;
   &lt;meta property=&quot;og:site_name&quot; content=&quot;GitHub Gists&quot;&gt;
   &lt;meta property=&quot;og:description&quot; content=&quot; - Gist is a simple way to share snippets of text and code with others.&quot;&gt;
   &lt;meta name=&quot;description&quot; content=&quot; - Gist is a simple way to share snippets of text and code with others.&quot;&gt;
@@ -86,7 +86,7 @@
         &lt;span class=&quot;mega-octicon octicon-gist&quot; &gt;&lt;/span&gt;
         &lt;div class=&quot;meta&quot;&gt;
           &lt;div class=&quot;gist-author&quot;&gt;
-            &lt;img src=&quot;https://1.gravatar.com/avatar/c992aac7727eefb8910e741996415cd7?d=https%3A%2F%2Fidenticons.github.com%2F132b2af25f97a32ee172dd1d0d3e6099.png&amp;s=140&quot; width=&quot;26&quot; height=&quot;26&quot;&gt;
+            &lt;img src=&quot;https://2.gravatar.com/avatar/c992aac7727eefb8910e741996415cd7?d=https%3A%2F%2Fidenticons.github.com%2F132b2af25f97a32ee172dd1d0d3e6099.png&amp;s=140&quot; width=&quot;26&quot; height=&quot;26&quot;&gt;
             &lt;span class=&quot;author vcard&quot;&gt;
                 &lt;span itemprop=&quot;title&quot;&gt;&lt;a href=&quot;/porcoesphino&quot;&gt;porcoesphino&lt;/a&gt;&lt;/span&gt;
             &lt;/span&gt; /
