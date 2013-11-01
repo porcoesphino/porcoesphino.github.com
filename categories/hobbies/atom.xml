@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Hobbies | Bodey Baker]]></title>
+  <link href="http://porcoesphino.github.io/categories/hobbies/atom.xml" rel="self"/>
+  <link href="http://porcoesphino.github.io/"/>
+  <updated>2013-11-01T10:52:19+08:00</updated>
+  <id>http://porcoesphino.github.io/</id>
+  <author>
+    <name><![CDATA[Bodey Baker]]></name>
+    <email><![CDATA[bodey.baker@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[T's paintings and monsters]]></title>
+    <link href="http://porcoesphino.github.io/2013/11/01/ts-paintings-and-monsters/"/>
+    <updated>2013-11-01T10:43:00+08:00</updated>
+    <id>http://porcoesphino.github.io/2013/11/01/ts-paintings-and-monsters</id>
+    <content type="html"><![CDATA[<p>There&rsquo;s not much to this post. Being back in Perth I saw a few of his paintings. Made me want to put some effort into learning to draw again. We&rsquo;ll see if that happens.</p>
+
+<p>I also found a post about Dave Devries work where he takes sketches of monsters drawn by children and paits them realistically. His book is called “<a href="http://www.themonsterengine.com/">The Monster Engine</a>”. It&rsquo;s pretty awesome, but as my friend said, isn&rsquo;t this infringing on the poor childrens hard work? :P</p>
+
+<p><img src="http://lh6.ggpht.com/__zoKJ77EvEc/Ta7jOJlDrEI/AAAAAAAAM-A/E-sPfxSAQn4/monster-engine13%5B2%5D.jpg?imgmax=800" title="One of their monsters" alt="A toothed donut monster... I think" /></p>
+]]></content>
+  </entry>
+  
+</feed>
